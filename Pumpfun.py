@@ -1,8 +1,8 @@
 ## Spencer Pump.fun discord webhooks
 ## 5/29/2024
 # First application using API's
-import cProfile
-import pstats
+#import cProfile
+#import pstats
 import requests
 from requests.adapters import HTTPAdapter, Retry
 import json
@@ -11,7 +11,7 @@ import time
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from solana.rpc.api import Client
 #from solders.pubkey import Pubkey
-from solathon import Client, PublicKey
+#from solathon import Client, PublicKey
 from helius import BalancesAPI
 
 #from theblockchainapi import TheBlockchainAPIResource
