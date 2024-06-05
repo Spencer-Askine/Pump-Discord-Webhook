@@ -307,7 +307,7 @@ while True:
         embed.set_author(name=f'${symbol}', url="", icon_url="")
         embed.add_embed_field(name="**Socials**", value =f'[Twitter]({twit})\n[Website]({site})\n[Telegram]({tele})')
         embed.add_embed_field(name="**Market Cap**", value=f'${MC:,}')
-        embed.add_embed_field("**Dev Owns**", value =f'{devholdings}% \n **Dev Wallet** \n ◎[{solacc}]({solscan})' )
+        embed.add_embed_field("**Dev Owns**", value =f'{devholdings}%' )
         embed.add_embed_field("Quick links", value =f'[Photon]({photon})  |  [Bonk]({Bonk})  |  [Trojan]({Trojan})')
 
         if sizeoflist == 0:
