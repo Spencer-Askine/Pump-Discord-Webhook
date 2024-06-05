@@ -9,7 +9,7 @@ import json
 import cryptocompare
 import time
 from discord_webhook import DiscordWebhook, DiscordEmbed
-from solana.rpc.api import Client
+#from solana.rpc.api import Client
 #from solders.pubkey import Pubkey
 #from solathon import Client, PublicKey
 from helius import BalancesAPI
