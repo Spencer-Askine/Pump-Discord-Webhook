@@ -170,7 +170,7 @@ while True:
         addy2 = response.json()['mint']
 
     if (addy2 in list):
-        #print(response.status_code)
+        print(response.status_code)
 
             #api_call(addy1,addy2,addy3,embed)
         
