@@ -1,1 +1,1 @@
-worker: python ./pumpfun.py
+worker: python pumpfun.py
