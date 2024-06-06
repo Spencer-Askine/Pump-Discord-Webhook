@@ -31,94 +31,15 @@ retries = Retry(total=5,
 requests.mount('http://', HTTPAdapter(max_retries=retries))
 
 
-#headers = requests.utils.default_headers()
-
-#headers.update(
- #   {
- #       'User-Agent': 'My User Agent 1.0',
-  #  }
-#)
-
-proxies = {'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-ml8h1bqk_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-q2llpdhm_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-dkq1yfow_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-f4zizm0m_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-u6ngu8ln_direct-1@nft.bullproxies.com:12321', 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-m4zen7po_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-4fjeq2zy_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-4oyhjry7_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-zgnrn7co_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-t8zdcdos_direct-1@nft.bullproxies.com:12321', 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-zrruawc4_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-ykq0dp9q_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-im79ck76_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-13ypyae9_direct-1@nft.bullproxies.com:12321',
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_session-rbcngd9p_direct-1@nft.bullproxies.com:12321'}
-
-proxyrotate = {'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
+proxyrotate = {'https':'PXY_m1CQlTt5:rjotoinnv_country-us_direct-1@nft.bullproxies.com:12321',
 
 'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
+'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-virginia_direct-1@nft.bullproxies.com:12321',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
+'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-westvirginia_direct-1@nft.bullproxies.com:12321',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
-
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321'}
-
-proxiespro = {'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-vp54sylr-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-feeb5nfi-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-ixjuva02-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-8v5udqrf-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-cayeokv4-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-bvz4tsh6-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-3nn1v8yr-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-nzwg1top-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-mp2gwmtl-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-qiplj26m-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-pzutqkcn-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-tep4tabt-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-s5d9ny4e-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-gt9xj1iq-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-04e5zk7a-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-cfnunrha-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-q6w9ou4v-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-b8ntfosb-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-s7i2jz88-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-jgnxdtco-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-4j7fo0gk-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-0rz769ql-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-vhpwhq86-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-zrwgrdvh-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-78ghp8lq-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-omhaljy3-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-bs1dclfy-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-2q2fr8wm-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-j2ajqdqj-sesstime-60@pro.bullproxies.com:7777',
-'https':'6JKaLr17:NlRZWMhS-cc-us-sessid-9bbr9x9c-sesstime-60@pro.bullproxies.com:7777'}
-
-proxiesnew = {
-              'https':'hs009g19:8iHj3TYPtK@89.33.163.53:2339'
-              }
+'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-delaware_direct-1@nft.bullproxies.com:12321'}
 
 
 webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1245561134124105738/hUEMTSz6ONiKgQLrXHl9Cdh9vbXofPZx4_fqsmPSWZ2kRDirM7mzcczeFmwfWP54pz__")
@@ -127,7 +48,7 @@ webhook = DiscordWebhook(url="https://discord.com/api/webhooks/12455611341241057
 
 balances_api = BalancesAPI("dc413c72-95b9-420c-8c7b-623fb40ba555")
 
-response = requests.get('https://client-api-2-74b1891ee9f9.herokuapp.com/coins/latest')
+response = requests.get('https://frontend-api.pump.fun/coins/latest')
 addy1 = response.json()['mint']  
 addy2 = ''  
 addy3 = ''
@@ -146,7 +67,8 @@ while True:
     try:
         #testresponse = requests.get('https://client-api-2-74b1891ee9f9.herokuapp.com/coins?offset=0&limit=20&sort=created_timestamp&order=desc&includeNsfw=true')
         #print(testresponse.json())
-        response = requests.get('https://client-api-2-74b1891ee9f9.herokuapp.com/coins/latest' , proxies = proxyrotate)
+        response = requests.get('https://frontend-api.pump.fun/coins/latest')# , proxies = proxyrotate)
+        time.sleep(0.5)
         addy2 = response.json()['mint']
         #print(addy2)
         #payload = {
@@ -165,12 +87,14 @@ while True:
     except:
         addy = 0
     while (addy2 == 0):
-        time.sleep(0.1)
-        response = requests.get('https://client-api-2-74b1891ee9f9.herokuapp.com/coins/latest' , proxies = proxyrotate)
+        response = requests.get('https://frontend-api.pump.fun/coins/latest')# , proxies = proxyrotate)
+        
         addy2 = response.json()['mint']
+        time.sleep(0.5)
 
     if (addy2 in list):
         print(response.status_code)
+        nothing = 'nothing'
 
             #api_call(addy1,addy2,addy3,embed)
         
@@ -229,7 +153,7 @@ while True:
         except:
             balance = 'N/A'
         try:
-            devtrades = 'https://client-api-2-74b1891ee9f9.herokuapp.com/trades/' +addy+'?limit=10&offset=0'
+            devtrades = 'https://frontend-api.pump.fun/trades/' +addy+'?limit=10&offset=0'
             trades = requests.get(devtrades)
             devout = trades.json()
             for dictionary in devout:
@@ -244,7 +168,7 @@ while True:
            
 
         try:
-            devcoins = 'https://client-api-2-74b1891ee9f9.herokuapp.com/coins?limit=20&offset=0&sort=created_timestamp&order=desc&includeNsfw=true&creator=' + dev
+            devcoins = 'https://frontend-api.pump.fun/coins/user-created-coins/' + dev + '?limit=10&offset=0&includeNsfw=true'
             
             devcoinget = requests.get(devcoins)
             devcoinlist = devcoinget.json()
@@ -252,10 +176,11 @@ while True:
             sizeoflist = len(firstfive)
             my_dict = {}
             n = 0
-            #print(sizeoflist)
+            print(sizeoflist)
             #print(firstfive[0])
-            while (n < sizeoflist):
-                templist = firstfive[n]
+            try:
+                while (n < sizeoflist):
+                    templist = firstfive[n]
 
                 #my_dict[n].update({'mint':tempmint})
                 #tempname = templist.get('name')
@@ -264,24 +189,26 @@ while True:
                 #my_dict[n].update({'mc':tempmc})
                 #tempcomp = templist.get('complete')
                 #my_dict[n].update({'complete':tempcomp})
-                my_dict[n] = {}
-                tempname = templist.get('name')
+                    my_dict[n] = {}
+                    tempname = templist.get('name')
                 #print(tempname)
-                tempmint = templist.get('mint')
+                    tempmint = templist.get('mint')
                 #print(tempmint)
-                tempmc = templist.get('usd_market_cap')
+                    tempmc = templist.get('usd_market_cap')
                 #print(tempmc)
-                complete = templist.get('complete')
+                    complete = templist.get('complete')
                 #print(complete)
-                my_dict[n]['name'] = tempname
+                    my_dict[n]['name'] = tempname
                 #my_dict[n].update({'mint':tempmint})
-                my_dict[n]['mint'] = tempmint
-                my_dict[n]['marketcap'] = tempmc
-                my_dict[n]['complete'] = complete
+                    my_dict[n]['mint'] = tempmint
+                    my_dict[n]['marketcap'] = tempmc
+                    my_dict[n]['complete'] = complete
                 
 
-                n = n+1
-                
+                    n = n+1
+            except:
+                  my_dict = {}
+                      
             #for i in firstfive:
             #    newmint = i.get('mint')
             #    mintname = 'mint{n}'
@@ -292,8 +219,9 @@ while True:
 
         except:
             devcoinlist = 'N/A'
-            print('Not working')
             sizeoflist = 0
+            print('Dev coins api fried')
+            my_dict = {}
 
         solscan = 'https://solscan.io/account/' + dev
 
@@ -570,7 +498,7 @@ while True:
 
         list.append(addy2)
         list.pop(0)
-        print("Sent")
+        #print("Sent")
             #api_call(addy1,addy2,addy3,embed)
 
 #api_call(addy1,addy2,addy3,embed)
