@@ -293,6 +293,7 @@ while True:
         except:
             devcoinlist = 'N/A'
             print('Not working')
+            sizeoflist = 0
 
         solscan = 'https://solscan.io/account/' + dev
 
