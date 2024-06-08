@@ -265,7 +265,6 @@ while True:
             coin2addy = my_dict[1].get('mint')
             coin2mc = my_dict[1].get('marketcap')
             coin2comp = my_dict[1].get('complete')
-            embed.add_embed_field("Previous Coins", value =f'None')
             coin1link =  'https://pump.fun/' + coin1addy
             coin2link =  'https://pump.fun/' + coin2addy
             coin1mc = round(coin1mc)
