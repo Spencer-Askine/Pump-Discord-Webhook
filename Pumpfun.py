@@ -67,9 +67,10 @@ while True:
     try:
         #testresponse = requests.get('https://client-api-2-74b1891ee9f9.herokuapp.com/coins?offset=0&limit=20&sort=created_timestamp&order=desc&includeNsfw=true')
         #print(testresponse.json())
-        response = requests.get('https://frontend-api.pump.fun/coins/latest' , proxies = proxyrotate)
+        response = requests.get('https://frontend-api.pump.fun/coins/latest')# , proxies = proxyrotate)
         time.sleep(0.5)
         addy2 = response.json()['mint']
+        time.sleep(0.25)
         #print(addy2)
         #payload = {
         #    "id": 1,
@@ -87,10 +88,10 @@ while True:
     except:
         addy = 0
     while (addy2 == 0):
-        response = requests.get('https://frontend-api.pump.fun/coins/latest' , proxies = proxyrotate)
+        response = requests.get('https://frontend-api.pump.fun/coins/latest')# , proxies = proxyrotate)
         
         addy2 = response.json()['mint']
-        time.sleep(0.5)
+        time.sleep(0.25)
 
     if (addy2 in list):
         print(response.status_code)
