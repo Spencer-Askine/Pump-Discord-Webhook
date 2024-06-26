@@ -1,26 +1,15 @@
 ## Spencer Pump.fun discord webhooks
 ## 5/29/2024
 # First application using API's
-#import cProfile
-#import pstats
+
 import requests
 from requests.adapters import HTTPAdapter, Retry
 import json
 import cryptocompare
 import time
 from discord_webhook import DiscordWebhook, DiscordEmbed
-#from solana.rpc.api import Client
-#from solders.pubkey import Pubkey
-#from solathon import Client, PublicKey
+
 from helius import BalancesAPI
-
-#from theblockchainapi import TheBlockchainAPIResource
-
-#MY_API_KEY_ID = RCkovU5Iyb4VEF9
-#MY_API_SECRET_KEY = Iu99YrJWAMeXvks
-
-
-
 
 
 solana_endpoint = 'https://api.mainnet-beta.solana.com'
@@ -28,25 +17,26 @@ requests = requests.Session()
 retries = Retry(total=5,
                 backoff_factor=0.1,
                 status_forcelist=[ 500, 502, 503, 504 ])
+
 requests.mount('http://', HTTPAdapter(max_retries=retries))
 
 
-proxyrotate = {'https':'PXY_m1CQlTt5:rjotoinnv_country-us_direct-1@nft.bullproxies.com:12321',
+proxyrotate = {'https':'Enter Proxy Here',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-maryland_direct-1@nft.bullproxies.com:12321',
+'https':'Enter Proxy Here',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-virginia_direct-1@nft.bullproxies.com:12321',
+'https':'Enter Proxy Here',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-westvirginia_direct-1@nft.bullproxies.com:12321',
+'https':'Enter Proxy Here',
 
-'https':'PXY_m1CQlTt5:rjotoinnv_country-us_state-delaware_direct-1@nft.bullproxies.com:12321'}
-
-
-webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1245561134124105738/hUEMTSz6ONiKgQLrXHl9Cdh9vbXofPZx4_fqsmPSWZ2kRDirM7mzcczeFmwfWP54pz__")
+'https':'Enter Proxy Here'}
 
 
+webhook = DiscordWebhook(url="Enter Webhook link Here")
 
-balances_api = BalancesAPI("dc413c72-95b9-420c-8c7b-623fb40ba555")
+
+
+balances_api = BalancesAPI("Enter API key Here")
 
 response = requests.get('https://frontend-api.pump.fun/coins/latest')
 addy1 = response.json()['mint']  
@@ -57,12 +47,7 @@ list = [addy1,addy2,addy3]
 
 embed = DiscordEmbed
 
-#def api_call(addy1,addy2,addy3,embed):
 while True:
-    url = "https://solana-mainnet.g.alchemy.com/v2/ieeha2K6xgNACghpsuDehHuDRa9g_sJv"
-    
-
-    #{"jsonrpc":"2.0","error":{"code":-32602,"message":"`params` should have at least 1 argument(s)"},"id":1}
 
     try:
         #testresponse = requests.get('https://client-api-2-74b1891ee9f9.herokuapp.com/coins?offset=0&limit=20&sort=created_timestamp&order=desc&includeNsfw=true')
@@ -71,19 +56,6 @@ while True:
         time.sleep(0.5)
         addy2 = response.json()['mint']
         time.sleep(0.25)
-        #print(addy2)
-        #payload = {
-        #    "id": 1,
-        #    "jsonrpc": "2.0",
-        #    "method": "getBalance"
-        #    "Params": ["33UdRJm2p7FGYivdXEzMSM2qjpP3VcPGNTiDBhtCQybJ"]
-#}
-        #headers = {
-        #    "accept": "application/json",
-        #    "content-type": "application/json"
-#}
-        #response = requests.post(url, json=payload, headers=headers)
-
 
     except:
         addy = 0
@@ -96,8 +68,6 @@ while True:
     if (addy2 in list):
         print(response.status_code)
         nothing = 'nothing'
-
-            #api_call(addy1,addy2,addy3,embed)
         
     else:
 
@@ -123,30 +93,10 @@ while True:
         dev1 = 'https://pump.fun/profile/' + dev
         photon = 'https://photon-sol.tinyastro.io/en/lp/' + addy
 
-
-
-
-        #your_pubkey = Pubkey.from_string(dev)
-        #public_key = PublicKey(your_pubkey)
-        #balance = solana_endpoint.get_balance(dev)
-        #print(balance)
-
-        #solscan = 'https://pro-api.solscan.io/v1.0/account/tokens?account=' + dev
-        #solscan_output = requests.get(solscan,proxies = proxyrotate)
-        #print(solscan_output)
-
-
-        #devwallet = solana_endpoint.rpc.types.Pubkey.from_string(dev)
-        #money = solana_endpoint.get_balance(Pubkey(dev))
-        #devmoney = money['value']
-
-        #GetBalanceResp { context: RpcResponseContext { slot: 269553824, api_version: Some("1.18.12") }, value: 933762493 }
-#Sent
-        #{'tokens': [], 'nativeBalance': 1600000000}
         
         try:
             balances = balances_api.get_balances(dev)
-            #print(balances)
+            
             for dic in balances:
                 solacc = balances['nativeBalance']
                 solacc = solacc * 0.000000001
@@ -178,29 +128,22 @@ while True:
             my_dict = {}
             n = 0
             print(sizeoflist)
-            #print(firstfive[0])
+            
             try:
                 while (n < sizeoflist):
                     templist = firstfive[n]
 
-                #my_dict[n].update({'mint':tempmint})
-                #tempname = templist.get('name')
-                #my_dict[n].update({'name':tempname})
-                #tempmc = templist.get('usd_market_cap')
-                #my_dict[n].update({'mc':tempmc})
-                #tempcomp = templist.get('complete')
-                #my_dict[n].update({'complete':tempcomp})
                     my_dict[n] = {}
                     tempname = templist.get('name')
-                #print(tempname)
+                
                     tempmint = templist.get('mint')
-                #print(tempmint)
+                
                     tempmc = templist.get('usd_market_cap')
-                #print(tempmc)
+                
                     complete = templist.get('complete')
-                #print(complete)
+                
                     my_dict[n]['name'] = tempname
-                #my_dict[n].update({'mint':tempmint})
+                
                     my_dict[n]['mint'] = tempmint
                     my_dict[n]['marketcap'] = tempmc
                     my_dict[n]['complete'] = complete
@@ -210,12 +153,6 @@ while True:
             except:
                   my_dict = {}
                       
-            #for i in firstfive:
-            #    newmint = i.get('mint')
-            #    mintname = 'mint{n}'
-            #    print(mintname)
-            #    my_dict[n] = newmint
-            #    n = n+1
                 
 
         except:
@@ -483,22 +420,15 @@ while True:
         embed.set_footer(text="Made by Curiosity.eth")  
 
 
-        #if (site == 'None' or twit == 'None'or tele == 'None'):
-            #webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1245561134124105738/hUEMTSz6ONiKgQLrXHl9Cdh9vbXofPZx4_fqsmPSWZ2kRDirM7mzcczeFmwfWP54pz__")
+  
         embed.set_timestamp()
         webhook.add_embed(embed)
         webhook.execute(remove_embeds=True)
         my_dict.clear()
         #else:
 
-            #webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1247213583503200407/JRyE4GWjofM7BdVMxoGuCUY9JDWS1FNpVsigPXz-SaOaggPF6n0VUHmSgY42C7p3K1_-")
-        #    embed.set_timestamp()
-        #    webhook2.add_embed(embed)
-        #    webhook2.execute(remove_embeds=True)
+          
 
         list.append(addy2)
         list.pop(0)
-        #print("Sent")
-            #api_call(addy1,addy2,addy3,embed)
-
-#api_call(addy1,addy2,addy3,embed)
+        
